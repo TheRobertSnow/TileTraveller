@@ -9,7 +9,7 @@ running = True
 def notValid():
     print("Not a valid direction!")
 
-def direction(direction, position_x, position_y, north, east, south, west, running):
+def direction(direction, position_x, position_y, north, east, south, west, running):    # Function that updates the current position according to given direction
     direction = direction.lower()
     if direction == "n":
         if north == True:
@@ -35,9 +35,9 @@ def direction(direction, position_x, position_y, north, east, south, west, runni
             north, east, south, west, running = options(position_x, position_y, north, east, south, west, running)
         else:
             notValid()
-    return position_x, position_y, north, east, south, west, running
+    return position_x, position_y, north, east, south, west, running    # return updated values to global variables
 
-def options(position_x, position_y, north, east, south, west, running):
+def options(position_x, position_y, north, east, south, west, running): # Function that prints valid directions in relation to current position
     if position_x == 1 and position_y == 3:
         print("You can travel: (N)orth.")
         north = True
@@ -95,4 +95,5 @@ def options(position_x, position_y, north, east, south, west, running):
 print("You can travel: (N)orth.")
 while running:
         directionInput = input("Direction: ")
+        #--- send global variables to function and receve global variables for updated position and direction availability.
         position_x, position_y, north, east, south, west, running = direction(directionInput, position_x, position_y, north, east, south, west, running)
