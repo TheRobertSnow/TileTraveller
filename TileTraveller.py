@@ -1,3 +1,5 @@
+#| Daníel Þór Gestsson og Róbert Snær Harðarsson | HR | H2019 | Assignment 8: Tile Traveller | 17/09/19 |
+# https://github.com/TheRobertSnow/TileTraveller
 position_x = 1
 position_y = 3
 north = True
